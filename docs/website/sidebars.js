@@ -498,6 +498,7 @@ const sidebars = {
         'walkthroughs/dispatch-to-multiple-tables',
         'walkthroughs/share-a-dataset',
         'walkthroughs/create-new-destination',
+        'walkthroughs/build-streamlit-dashboard',
       ],
     },
   ],
