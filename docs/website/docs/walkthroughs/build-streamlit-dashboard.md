@@ -1,10 +1,10 @@
 ---
-title: Build a Streamlit dashboard
+title: Build and deploy a Streamlit app
 description: Build, serve, and deploy a Streamlit app on dltHub.
-keywords: [streamlit, dashboard, hub, app, deploy, dltHub]
+keywords: [streamlit, app, dashboard, hub, deploy, dltHub]
 ---
 
-# Build a Streamlit dashboard
+# Build and deploy a Streamlit app
 
 [Streamlit](https://docs.streamlit.io/) is a Python framework for turning a script into an interactive web app. On dltHub, a Streamlit app is a plain `.py` file that imports `streamlit`, and the runtime serves it as an interactive dashboard.
 
@@ -12,13 +12,15 @@ This page walks through building a small dashboard against a loaded dlt dataset 
 
 ## Prerequisites
 
+This example builds on the `starter_pipeline` that the `dlthub-start` scaffold ships. If you haven't set up a workspace yet, follow the [Quick start](../hub/introduction.md#quick-start) first.
+
 Add Streamlit to your workspace dependencies:
 
 ```sh
 uv add streamlit
 ```
 
-The example below reads from the `starter_pipeline` that the `dlthub-start` scaffold ships (Open Brewery DB → `warehouse` destination, `brewery_data` dataset). The dashboard needs that data already loaded against the same destination it'll read from:
+The dashboard needs `starter_pipeline`'s data already loaded against the same destination it'll read from:
 
 ```sh
 # Load locally (dev profile, DuckDB) so the dashboard works in `streamlit run`
